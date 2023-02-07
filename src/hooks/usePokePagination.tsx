@@ -15,7 +15,6 @@ export const usePokePagination = () => {
   }
 
   const mapPokemonList = (pokemonList: Result[]) => {
-    // pokemonList.forEach((pokemon) => console.log(pokemon.name))
     const newPokemonList: SimplePokemon[] = pokemonList.map(({ name, url }) => {
       const urlPart = url.split('/')
       const id = urlPart[urlPart.length - 2]
@@ -34,5 +33,5 @@ export const usePokePagination = () => {
     loadPokemons()
   }, [])
 
-  return { isLoading, simplePokemonList }
+  return { isLoading, simplePokemonList, loadPokemons }
 }

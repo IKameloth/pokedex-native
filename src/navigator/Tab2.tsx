@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import { HomeScreen } from '../screens/HomeScreen'
 import { PokemonScreen } from '../screens/PokemonScreen'
 import { SimplePokemon } from '../interfaces/pokemonInterface'
+import { SearchScreen } from '../screens/SearchScreen'
 
 export type RootStackParams = {
   HomeScreen: undefined
@@ -10,7 +10,7 @@ export type RootStackParams = {
 
 const Stack = createStackNavigator<RootStackParams>()
 
-export const Navigation = () => {
+export const Tab2 = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -20,7 +20,7 @@ export const Navigation = () => {
         }
       }}
     >
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="HomeScreen" component={SearchScreen} />
       <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
     </Stack.Navigator>
   )
